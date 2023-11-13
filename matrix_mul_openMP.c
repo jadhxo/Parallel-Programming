@@ -36,7 +36,7 @@ int main() {
   }
 
   // Parallelize the matrix multiplication loop
-  #pragma omp parallel for
+  #pragma omp parallel for num_threads(4)
   for (int i = 0; i < M; i++) {
     for (int j = 0; j < N; j++) {
       matrix_c[i][j] = 0;
